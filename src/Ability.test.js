@@ -14,11 +14,11 @@ it('can be clicked to be activated', () => {
   expect(ability.state().active).toBeFalsy();
   ability.simulate('click');
   expect(ability.state().active).toBeTruthy();
-})
+});
 
 it('saves the time it was clicked when activated', () => {
   ability.simulate('click');
   var d = new Date();
   var diff = Math.abs(ability.state().lastActivated.getTime() - d.getTime());
   expect(diff).toBeLessThan(100);
-})
+});
