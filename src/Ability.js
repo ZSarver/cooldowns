@@ -23,8 +23,10 @@ class Ability extends Component {
         return body;
     }
     activate() {
-        var d = new Date();
-        this.setState({ active: true, lastActivated: d });
+        this.setState({active: true, lastActivated: new Date()});
+        setTimeout( () => {
+            this.setState({active: false });
+        }, this.props.cooldown);
     }
 }
 
