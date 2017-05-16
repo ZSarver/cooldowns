@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Ability from './Ability.js'
+import AbilityBox from './AbilityBox'
 
 class App extends Component {
   render() {
@@ -14,7 +15,8 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Ability cooldown="1000" />>
+        <Ability name="default" cooldown="1000" />>
+        <AbilityBox />
       </div>
     );
   }
