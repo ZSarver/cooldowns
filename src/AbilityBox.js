@@ -13,10 +13,12 @@ class AbilityBox extends Component {
         };
 
         this.abilities = [];
+        this.id = 0;
 
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleTimeChange = this.handleTimeChange.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     handleNameChange(event) {
@@ -24,8 +26,9 @@ class AbilityBox extends Component {
     }
 
     handleSubmit(event) {
-        this.abilities.push(<Ability name={this.state.nameValue} cooldown={this.state.timeValue} />);
+        this.abilities.push(<Ability name={this.state.nameValue} cooldown={this.state.timeValue} handleDelete={this.handleDelete} id={this.id} />);
         this.setState({ abilities: this.abilities, nameValue: '', timeValue: 0 });
+        this.id += 1;
         event.preventDefault();
         return false;
     }
@@ -33,6 +36,12 @@ class AbilityBox extends Component {
     handleTimeChange(event) {
         this.setState({ timeValue: event.target.value });
     }
+
+    handleDelete(event) {
+        this.abilities.splice(event.target.value, 1);
+        this.setState({ abilities: this.abilities });
+    }
+
     render() {
         return (
             <div className="ability-box">

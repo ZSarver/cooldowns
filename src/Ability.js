@@ -11,21 +11,29 @@ class Ability extends Component {
         };
 
         this.activate = this.activate.bind(this);
+        console.log(this.props.id);
     }
+
     render() {
-        var body;
+        var message;
         if (this.state.active) {
-            body = <div><p>{this.props.name} activated at {this.state.lastActivated.toString()}</p></div>;
+            message = <p>{this.props.name} activated at {this.state.lastActivated.toString()}</p>;
         }
         else {
-            body = <div onClick={this.activate}><p>Ready to activate {this.props.name}</p></div>;
+            message = <div className="ready-to-activate"><p>Ready to activate {this.props.name}</p>
+                <button className="activate-button" onClick={this.activate}>Activate</button></div>;
         }
-        return body;
+        return (
+            <div className="ability">
+                {message}
+                <button className="delete-button" id={this.props.id} onClick={this.props.handleDelete} value={this.props.id}>Delete</button>
+            </div>
+        );
     }
     activate() {
-        this.setState({active: true, lastActivated: new Date()});
-        setTimeout( () => {
-            this.setState({active: false });
+        this.setState({ active: true, lastActivated: new Date() });
+        setTimeout(() => {
+            this.setState({ active: false });
         }, this.props.cooldown);
     }
 }
