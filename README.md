@@ -2,7 +2,7 @@ Cooldowns is a webapp for managing real life things like they were [MMO abilitie
 
 ## Building
 
-Cooldowns is a ReactJS App, so you will need NodeJS and npm installed. Then do
+Cooldowns is a ReactJS App, so you will need NodeJS and npm installed. CD into the directory and then do
 
 ```
 npm install
@@ -28,7 +28,9 @@ The purpose of this webapp is to give me an MMO-style ability hotbar for *life*,
 
 ### It's not very functional...
 
-That's not a question, but it's a work in progress. It technically does what it's supposed to, it's just ugly as sin. It's also missing a lot of niceties, like for example your ability hotbar has no persistence.
+That's not a question.
+
+The app is a work in progress. It technically does what it's supposed to, it's just ugly as sin. It's also missing a lot of niceties, like for example your ability hotbar has no persistence.
 
 ## Planned features
 
