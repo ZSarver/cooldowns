@@ -2,7 +2,7 @@ Cooldowns is a webapp for managing real life things like they were [MMO abilitie
 
 ## Building
 
-Cooldowns is a ReactJS App, so you will need NodeJS and npm installed. CD into the directory and then do
+Cooldowns is a ReactJS App, so you will need NodeJS and npm installed. cd into the directory and then do
 
 ```
 npm install
