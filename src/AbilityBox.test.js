@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 import AbilityBox from './AbilityBox';
+import Ability from './Ability'
 
 it('renders without crashing', () => {
     shallow(<AbilityBox />);
@@ -17,5 +18,5 @@ it('creates abilities when the add button is clicked', () => {
 
     ab.find(".new-ability-form").simulate('submit');
 
-    expect(ab.contains(<Abilty name={nameInput.value} cooldown={timeInput.value} />)).toBeTruthy();
+    expect(ab.contains(<Ability name="test event" cooldown="1000" />)).toBeTruthy();
 });

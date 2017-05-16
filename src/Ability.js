@@ -15,10 +15,10 @@ class Ability extends Component {
     render() {
         var body;
         if (this.state.active) {
-            body = <div><p>Activated at {this.state.lastActivated.toString()}</p></div>;
+            body = <div><p>{this.props.name} activated at {this.state.lastActivated.toString()}</p></div>;
         }
         else {
-            body = <div onClick={this.activate}><p>Nobody here but us chickens!</p></div>;
+            body = <div onClick={this.activate}><p>Ready to activate {this.props.name}</p></div>;
         }
         return body;
     }
