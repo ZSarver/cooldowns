@@ -20,9 +20,10 @@ npm test
 1. Why?
 
   I have two problems.
-  1. I love coffee.
-  1. Drinking coffee too frequently gives me headaches.
+    1. I love coffee.
+    1. Drinking coffee too frequently gives me headaches.
   The purpose of this webapp is to give me an MMO-style ability hotbar for *life*, so that I can mangage my coffee consumption and anything else that I will want to take a break from after doing.
+
 1. It's not very functional...
 
   That's not a question, but it's a work in progress. It technically does what it's supposed to, it's just ugly as sin. It's also missing a lot of niceties, like for example your ability hotbar has no persistence.
